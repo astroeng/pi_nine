@@ -1,8 +1,17 @@
 #include <cmath>
 #include <iostream>
+#include <cstring>
 #include "compute.h"
 
 using namespace std;
+
+
+// Execution times for a 4.4 ghz Core i7
+// 3.14159 :    516243 :     64325 -- less than a second
+// 3.14159 :   6734215 :   2143567 -- 3 seconds
+// 3.14159 :  87435126 :  27831465 -- 5 minutes
+// 3.14159 : 467895213 : 148935672 -- 8 hours(ish)
+
 
 dataOutputType compute_rec(int numeratorArray[], 
                            int denomenatorArray[], 
@@ -17,7 +26,7 @@ dataOutputType compute_rec(int numeratorArray[],
   {
     numerator *= 10;
     numerator += numeratorArray[num_index];
-    numeratorArray[num_index]   = USED;
+    numeratorArray[num_index] = USED;
   }
   
   if (den_index >= 0)

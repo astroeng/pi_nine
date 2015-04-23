@@ -1,5 +1,6 @@
 #include <cmath>
 #include <iostream>
+#include <cstring>
 #include "compute.h"
 
 using namespace std;
